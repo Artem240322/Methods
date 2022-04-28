@@ -1,9 +1,25 @@
 package ru.skypro;
 
+import java.time.LocalDate;
+import java.time.Year;
+import java.util.Arrays;
+
 public class MyFunction {
     public static void main(String[] args) {
+        printIsLeapYear(2020);
+        printIsLeapYear(1,2015);
+        System.out.println("Дней для доставки" + calculateDeliveryDays(90));
+        validateString("abc");
+        validateString("abcc");
+
+        int [] arr = {5,4,3,2,1};
+        System.out.println(Arrays.toString(arr));
+        revertArray(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 
     // Задача 1
+
     public static void printIsLeapYear(int year) {
         boolean leapYear = ((year % 4) == 0) && ((year % 100) != 0 || (year % 400) == 0);
         ;
@@ -48,13 +64,20 @@ public class MyFunction {
 
     // ЗАДАЧА 4
 
-    public static void validateString(String.str) {
+    public static void validateString(String str) {
+        int fload = 0;
+        char symbol = 0;
         for (int i = 0; i < str.length() - 1; i++)
             if (str.charAt(i) == str.charAt(i + 1)) {
-                System.out.println("Дубликат найден " + str.charAt(i));
-                return;
+                symbol = str.charAr(i);
+                flag = 1;
+                break;
             }
-        System.out.println("Дубликат не найден ");
+        if(flag ==1 ) {
+            System.out.println("Дубликат найден " + symbol);
+            }
+        else
+            System.out.println("Дубликат не найден ");
     }
 
     /// ЗАДАЧА 5
