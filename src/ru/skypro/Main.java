@@ -1,10 +1,7 @@
 package ru.skypro;
-import java.time.Year;
-import java.util.Arrays;
 
 public class MyFunction {
-    public static void main(String[] args) {...}
-
+    public static void main(String[] args) {
 
     // Задача 1
     public static void printIsLeapYear(int year) {
@@ -15,6 +12,56 @@ public class MyFunction {
         } else {
             System.out.println(year + " не высокосный год");
 
+        }
+    }
+
+/// задача 2
+    public static void printVersion (int clientOS, int deviceYear) {
+        int currentYear = LocalDate.now().getYear();
+        if (clientOS == 0 && deviceYear < currentYear)
+            System.out.println("Установите облегченную версию для IOS ");
+        else if (clientOS == 0 && deviceYear >= currentYear)
+            System.out.println("Установите версию для IOS ");
+        else if (clientOS == 1 && deviceYear < currentYear)
+            System.out.println("Установите облегченную версию для Android ");
+        else
+            System.out.println("Установите версию для Android ");
+
+    }
+
+    /// Задача 3
+
+    public static int calculateDeliveryDays(int deliveryDistance) {
+        int deliveryDays = 1;
+        if (deliveryDistance > 20) {
+            deliveryDays ++;
+        }
+        if (deliveryDistance > 60) {
+            deliveryDays ++;
+        }
+        if (deliveryDistance > 80) {
+            deliveryDays ++;
+        }
+        return deliveryDays;
+
+    }
+
+    // ЗАДАЧА 4
+
+    public static void validateString(String.str) {
+        for (int i = 0; i < str.length() - 1; i++)
+            if (str.charAt(i) == str.charAt(i + 1)) {
+                System.out.println("Дубликат найден " + str.charAt(i));
+                return;
+            }
+        System.out.println("Дубликат не найден ");
+    }
+
+    /// ЗАДАЧА 5
+
+    public  static void rovertArroy(int[] arr) {
+        for (int i=0; i < arr.length; i++) {
+            arr[i] = arr[arr.length - 1 - i];
         }
     }
 }
