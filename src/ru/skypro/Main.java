@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class MyFunction {
     public static void main(String[] args) {
         printIsLeapYear(2020);
-        printIsLeapYear(1,2015);
+        printIsLeapYear(1, 2015);
         System.out.println("Дней для доставки" + calculateDeliveryDays(90));
         validateString("abc");
         validateString("abcc");
@@ -69,7 +69,7 @@ public class MyFunction {
         char symbol = 0;
         for (int i = 0; i < str.length() - 1; i++)
             if (str.charAt(i) == str.charAt(i + 1)) {
-                symbol = str.charAr(i);
+                symbol = str.charAt(i);
                 flag = 1;
                 break;
             }
