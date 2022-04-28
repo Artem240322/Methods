@@ -5,6 +5,7 @@ import java.time.Year;
 import java.util.Arrays;
 
 public class MyFunction {
+
     public static void main(String[] args) {
         printIsLeapYear(2020);
         printIsLeapYear(1, 2015);
@@ -14,7 +15,7 @@ public class MyFunction {
 
         int [] arr = {5,4,3,2,1};
         System.out.println(Arrays.toString(arr));
-        revertArray(arr);
+
         System.out.println(Arrays.toString(arr));
     }
 
@@ -88,3 +89,4 @@ public class MyFunction {
         }
     }
 }
+
