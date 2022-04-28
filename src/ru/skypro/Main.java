@@ -5,10 +5,9 @@ import java.time.Year;
 import java.util.Arrays;
 
 public class MyFunction {
-
     public static void main(String[] args) {
         printIsLeapYear(2020);
-        printIsLeapYear(1, 2015);
+        printVersion(1, 2015);
         System.out.println("Дней для доставки" + calculateDeliveryDays(90));
         validateString("abc");
         validateString("abcc");
